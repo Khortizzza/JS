@@ -26,19 +26,35 @@ cylinder1 = cylinder(6, 8)
 console.log(cylinder1);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-
-function cifr (a, b){
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    let slice = numbers.slice(2,5);
-
+function cyfr (){
+    let min = arguments [0];
+    let max = arguments [0];
+    for (const argument of arguments) {
+        if (argument < min )  min = argument;
+        if (argument > max )  max = argument;
+    }
+    console.log(max,'max')
+    return min;
 }
 
-console.log(slice);
+console.log(cyfr(4, 8, 15, 9, 14,22), 'min');
 
 
 
+// - створити функцію яка  створює блок з текстом. Текст задати через аргумент
 
-    // - створити функцію яка  створює блок з текстом. Текст задати через аргумент
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+function counter (data, count){
+    document.write(`<ul>`);
+    for (let i = 0; i < count; i++){
+        document.write(`<li>${data}</li>`);
+
+    }
+    document.write(`</ul>`);
+}
+counter ("Our text", 3)
+
+
+
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
